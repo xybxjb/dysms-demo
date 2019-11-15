@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dysms-demo.iml" filepath="$PROJECT_DIR$/dysms-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ly-sms/lysms.iml" filepath="$PROJECT_DIR$/ly-sms/lysms.iml" />
     </modules>
   </component>
 </project>

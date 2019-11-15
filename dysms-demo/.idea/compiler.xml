@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dysms-demo" />
+        <module name="lysms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dysms-demo" target="1.8" />
+      <module name="lysms" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
