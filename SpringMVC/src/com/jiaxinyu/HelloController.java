@@ -31,8 +31,8 @@ public class HelloController {
     }
 
     @RequestMapping("/saveAccout")
-    public String saveAccount(Account account){
-        System.out.println("保存账户。。"+account);
+    public String saveAccount(Account account) {
+        System.out.println("保存账户。。" + account);
         return "success";
     }
 

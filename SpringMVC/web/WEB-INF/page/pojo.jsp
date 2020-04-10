@@ -11,12 +11,12 @@
     <title>pojo</title>
 </head>
 <body>
- <form action="account/saveAccount" method="post">
-     账户名称： <input type="text" name="name"><br/>
-     账户金额：<input type="text" name="money">
-     账户省份：<input type="text" name="address.provinceName">
-     账户城市：<input type="address.cityName">
-     <input type="submit" value="保存">
- </form>
+<form action="account/saveAccount" method="post">
+    账户名称： <input type="text" name="name"><br/>
+    账户金额：<input type="text" name="money">
+    账户省份：<input type="text" name="address.provinceName">
+    账户城市：<input type="address.cityName">
+    <input type="submit" value="保存">
+</form>
 </body>
 </html>
