@@ -16,6 +16,7 @@ public @interface Select {
 
     /**
      * 配置SQL语句的
+     *
      * @return
      */
     String value();

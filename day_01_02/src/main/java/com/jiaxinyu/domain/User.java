@@ -13,6 +13,7 @@ public class User implements Serializable {
     private Date birthday;
     private String sex;
     private String address;
+
     public Integer getId() {
         return id;
     }

@@ -13,10 +13,12 @@ import java.util.List;
  */
 public class UserDaoImpl implements UserDao {
     private SqlSessionFactory f;
-//    private UserDao dao;
-    public UserDaoImpl(SqlSessionFactory f){
-        this.f=f;
+
+    //    private UserDao dao;
+    public UserDaoImpl(SqlSessionFactory f) {
+        this.f = f;
     }
+
     @Override
     public List<User> findAll() {
         SqlSession session = f.openSession();

@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2019-11-15 19:40
  */
 
-@ConfigurationProperties(prefix= "ly.sms")
+@ConfigurationProperties(prefix = "ly.sms")
 public class SmsProperties {
     String accessKey;
     String accessKeySecret;

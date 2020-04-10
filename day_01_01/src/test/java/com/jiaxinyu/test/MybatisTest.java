@@ -18,9 +18,10 @@ public class MybatisTest {
 
     /**
      * 入门案例
+     *
      * @param args
      */
-    public static void main(String[] args)throws Exception {
+    public static void main(String[] args) throws Exception {
         //1.读取配置文件
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         //2.创建SqlSessionFactory工厂
@@ -32,7 +33,7 @@ public class MybatisTest {
         IUserDao userDao = session.getMapper(IUserDao.class);
         //5.使用代理对象执行方法
         List<User> users = userDao.findAll();
-        for(User user : users){
+        for (User user : users) {
             System.out.println(user);
         }
         //6.释放资源

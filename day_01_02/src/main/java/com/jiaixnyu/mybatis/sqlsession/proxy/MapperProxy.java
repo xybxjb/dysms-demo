@@ -19,13 +19,14 @@ public class MapperProxy implements InvocationHandler {
     private Map<String, Mapper> mappers;
     private Connection conn;
 
-    public MapperProxy(Map<String,Mapper> mappers,Connection conn){
+    public MapperProxy(Map<String, Mapper> mappers, Connection conn) {
         this.mappers = mappers;
         this.conn = conn;
     }
 
     /**
      * 用于对方法进行增强的，我们的增强其实就是调用selectList方法
+     *
      * @param proxy
      * @param method
      * @param args
@@ -39,14 +40,14 @@ public class MapperProxy implements InvocationHandler {
         //2.获取方法所在类的名称
         String className = method.getDeclaringClass().getName();
         //3.组合key
-        String key = className+"."+methodName;
+        String key = className + "." + methodName;
         //4.获取mappers中的Mapper对象
         Mapper mapper = mappers.get(key);
         //5.判断是否有mapper
-        if(mapper == null){
+        if (mapper == null) {
             throw new IllegalArgumentException("传入的参数有误");
         }
         //6.调用工具类执行查询所有
-        return new Executor().selectList(mapper,conn);
+        return new Executor().selectList(mapper, conn);
     }
 }

@@ -22,27 +22,28 @@ import java.util.Map;
 @Component
 @EnableConfigurationProperties(SmsProperties.class)
 public class SmsListener {
-       @Autowired
-       private SmsUtils smsUtils;
-       @Autowired
-       private SmsProperties prop;
+    @Autowired
+    private SmsUtils smsUtils;
+    @Autowired
+    private SmsProperties prop;
+
     /**
      * 发送短信验证码的队列
-     * */
+     */
     @RabbitListener(bindings = @QueueBinding(
-            value=@Queue(name="sms.verify.code.queue",durable="true"),
-            exchange = @Exchange(name="ly.sms.exchange",type = ExchangeTypes.TOPIC),
+            value = @Queue(name = "sms.verify.code.queue", durable = "true"),
+            exchange = @Exchange(name = "ly.sms.exchange", type = ExchangeTypes.TOPIC),
             key = "sms.verify.code"
     ))
-    public void setSmsUtils(Map<String,String> msg) {
-        if(CollectionUtils.isEmpty(msg)){
+    public void setSmsUtils(Map<String, String> msg) {
+        if (CollectionUtils.isEmpty(msg)) {
             return;
         }
         String phone = msg.remove("phone");
-        if(StringUtils.isBlank(phone)){
+        if (StringUtils.isBlank(phone)) {
             return;
         }
         //处理消息，对索引库进行新增或修改
-        smsUtils.sendSms(phone,prop.getSignName(),prop.getVerifyCodeTemplate(),JsonUtils.toString(msg));
+        smsUtils.sendSms(phone, prop.getSignName(), prop.getVerifyCodeTemplate(), JsonUtils.toString(msg));
     }
 }

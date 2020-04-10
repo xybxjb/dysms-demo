@@ -32,9 +32,9 @@ public class Executor {
             rs = pstm.executeQuery();
             //4.封装结果集
             List<E> list = new ArrayList<E>();//定义返回值
-            while(rs.next()) {
+            while (rs.next()) {
                 //实例化要封装的实体类对象
-                E obj = (E)domainClass.newInstance();
+                E obj = (E) domainClass.newInstance();
 
                 //取出结果集的元信息：ResultSetMetaData
                 ResultSetMetaData rsmd = rs.getMetaData();
@@ -47,11 +47,11 @@ public class Executor {
                     //根据得到列名，获取每列的值
                     Object columnValue = rs.getObject(columnName);
                     //给obj赋值：使用Java内省机制（借助PropertyDescriptor实现属性的封装）
-                    PropertyDescriptor pd = new PropertyDescriptor(columnName,domainClass);//要求：实体类的属性和数据库表的列名保持一种
+                    PropertyDescriptor pd = new PropertyDescriptor(columnName, domainClass);//要求：实体类的属性和数据库表的列名保持一种
                     //获取它的写入方法
                     Method writeMethod = pd.getWriteMethod();
                     //把获取的列的值，给对象赋值
-                    writeMethod.invoke(obj,columnValue);
+                    writeMethod.invoke(obj, columnValue);
                 }
                 //把赋好值的对象加入到集合中
                 list.add(obj);
@@ -60,24 +60,24 @@ public class Executor {
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
-            release(pstm,rs);
+            release(pstm, rs);
         }
     }
 
 
-    private void release(PreparedStatement pstm,ResultSet rs){
-        if(rs != null){
+    private void release(PreparedStatement pstm, ResultSet rs) {
+        if (rs != null) {
             try {
                 rs.close();
-            }catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        if(pstm != null){
+        if (pstm != null) {
             try {
                 pstm.close();
-            }catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author  加鑫宇
+ * @author 加鑫宇
  */
-public class User implements Serializable{
+public class User implements Serializable {
 
     private Integer id;
     private String username;

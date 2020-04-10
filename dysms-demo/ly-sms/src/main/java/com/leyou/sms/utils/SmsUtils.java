@@ -31,7 +31,7 @@ public class SmsUtils {
     //产品域名,开发者无需替换
     static final String domain = "dysmsapi.aliyuncs.com";
 
-    public  SendSmsResponse sendSms(String PhoneNumber,String SignName,String TemplateCode,String TemplateParam) throws ClientException {
+    public SendSmsResponse sendSms(String PhoneNumber, String SignName, String TemplateCode, String TemplateParam) throws ClientException {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -63,8 +63,8 @@ public class SmsUtils {
         //hint 此处可能会抛出异常，注意catch
         SendSmsResponse sendSmsResponse = acsClient.getAcsResponse(request);
 
-        if(!"OK".equals(sendSmsResponse.getCode())){
-        log.info("[短信服务] 发送短信失败，phoneNumber:{}, 原因:{}",PhoneNumber,sendSmsResponse.getMessage());
+        if (!"OK".equals(sendSmsResponse.getCode())) {
+            log.info("[短信服务] 发送短信失败，phoneNumber:{}, 原因:{}", PhoneNumber, sendSmsResponse.getMessage());
         }
         return sendSmsResponse;
     }

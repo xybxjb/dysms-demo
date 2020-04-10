@@ -10,6 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class LySmsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(LySmsApplication.class,args);
+        SpringApplication.run(LySmsApplication.class, args);
     }
 }

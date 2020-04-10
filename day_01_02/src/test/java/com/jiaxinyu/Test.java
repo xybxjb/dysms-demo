@@ -14,9 +14,8 @@ import java.util.List;
  * @author
  * @date 2020-03-30 11:47
  */
-public class Test
-{
-    public static void main(String[] args)throws Exception {
+public class Test {
+    public static void main(String[] args) throws Exception {
         //1.读取配置文件
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         //2.创建SqlSessionFactory工厂
@@ -28,7 +27,7 @@ public class Test
         UserDao userDao = session.getMapper(UserDao.class);
         //5.使用代理对象执行方法
         List<User> users = userDao.findAll();
-        for(User user : users){
+        for (User user : users) {
             System.out.println(user);
         }
         //6.释放资源
