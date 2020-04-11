@@ -12,6 +12,9 @@
     <modules>
         <module>user_service</module>
         <module>consumer_demo</module>
+        <module>eureka_server</module>
+        <module>gateway</module>
+
     </modules>
 
 
