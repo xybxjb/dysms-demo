@@ -1,0 +1,1 @@
+[{"password":"xiaohei","role":"NORMAL","username":"xiaohei"},{"password":"123456","role":"ADMIN","username":"admin"}]
