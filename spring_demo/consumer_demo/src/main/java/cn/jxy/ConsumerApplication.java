@@ -16,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @EnableFeignClients //开启feign功能
+//这个相当于全导了
 @SpringCloudApplication
 public class ConsumerApplication {
 

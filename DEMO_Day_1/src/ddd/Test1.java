@@ -9,13 +9,14 @@ import org.junit.Test;
  * 小兔子长到第四个月后每个月又生一对兔子，
  * 假如兔子都不死，问每个月的兔子总数为多少？  
  * 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765
+ * 2 2 4 4 4 4 6
  */
 public class Test1 {
     @Test
     public static void main(String[] args) {
         int i = 0;
         //for循环代表的是月份
-        for (i = 1; i <= 20; i++) {
+        for (i = 1; i <= 12; i++) {
             System.out.println(f(i));
         }
     }

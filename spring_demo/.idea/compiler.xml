@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumer_demo" />
         <module name="eureka_server" />
-        <module name="gateway" />
+        <module name="consumer-demo" />
         <module name="user_service" />
+        <module name="gateway" />
+        <module name="consumer_demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
