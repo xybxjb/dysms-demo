@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.DynamicCommentDao">
+
+    <resultMap id = "commentResult" type = "cn.slipbend.model.Comment">
+        <id property = "id" column = "id"/>
+        <result property = "dynamic.id" column = "dynamic_id"/>
+        <result property = "user.id" column = "user_id"/>
+        <result property = "user.username" column = "username"/>
+        <result property = "user.icon" column = "icon"/>
+        <result property = "text" column = "text"/>
+        <result property = "parent.id" column = "pid"/>
+        <result property = "hot" column = "dch_hot"/>
+        <result property = "createDate" column = "create_time"/>
+    </resultMap>
+
+    <resultMap id = "commentResult2" extends = "commentResult" type = "cn.slipbend.model.Comment">
+        <association property = "hasMyHot" column = "{commentId = id, userId = my_user_id}"
+                     select = "cn.slipbend.dao.DynamicCommentDao.hasMyHot"/>
+    </resultMap>
+
+    <resultMap id = "commentResult3" extends = "commentResult2" type = "cn.slipbend.model.Comment">
+        <association property = "numSubComment" column = "id"
+                     select = "cn.slipbend.dao.DynamicCommentDao.countSubComment"/>
+        <collection property = "subComment" column = "{dynamicId = dynamic_id, commentId = id, order = order_rule,userId = my_user_id}"
+                    select = "cn.slipbend.dao.DynamicCommentDao.listSubComment"/>
+    </resultMap>
+
+    <select id="getDynamicComment" resultMap="commentResult3">
+        SELECT
+            dc.id,
+            dc.dynamic_id,
+            dc.user_id,
+            dc.text,
+            dc.pid,
+            dc.create_time,
+            dch.hot dch_hot,
+            u.username,
+            u.icon,
+            IFNULL(#{order}, "") order_rule,
+            IFNULL(#{userId}, "") my_user_id
+        FROM
+            dynamic_comment dc
+            LEFT JOIN (SELECT dynamic_id,comment_id,count(comment_id) hot FROM dynamic_comment_hot WHERE dynamic_id = #{dynamicId} GROUP BY comment_id) dch ON dc.id = dch.comment_id
+            LEFT JOIN user u ON dc.user_id = u.id
+        WHERE
+            dc.dynamic_id = #{dynamicId}
+            and pid = 0
+        ORDER BY
+            <if test="order == 1">
+                dch.hot DESC
+            </if>
+            <if test="order == 2">
+                dc.create_time DESC
+            </if>
+        <if test="a != null">
+            LIMIT #{a},#{b}
+        </if>
+    </select>
+
+    <select id="listSubComment" resultMap="commentResult2">
+        SELECT
+            dc.id,
+            dc.dynamic_id,
+            dc.user_id,
+            dc.text,
+            dc.pid,
+            dc.create_time,
+            dch.hot dch_hot,
+            u.username,
+            u.icon,
+            IFNULL(#{userId}, "") my_user_id
+        FROM
+            dynamic_comment dc
+            LEFT JOIN (SELECT dynamic_id,comment_id,count(comment_id) hot FROM dynamic_comment_hot WHERE dynamic_id = #{dynamicId} GROUP BY comment_id) dch ON dc.id = dch.comment_id
+            LEFT JOIN user u ON dc.user_id = u.id
+        WHERE
+            pid = #{commentId}
+        ORDER BY
+            <if test="order == 1">
+                dch.hot DESC
+            </if>
+            <if test="order == 2">
+                dc.create_time DESC
+            </if>
+        <if test="a == null">
+            LIMIT 0,2
+        </if>
+        <if test="a != null">
+            LIMIT #{a},#{b}
+        </if>
+    </select>
+
+    <select id="hasMyHot" resultType="java.lang.Boolean">
+        SELECT
+	        ( CASE hot WHEN 1 THEN 'true' WHEN 0 THEN 'false' END ) AS has_my_hot
+        FROM
+	        ( SELECT count( * ) hot FROM dynamic_comment_hot WHERE user_id = #{userId} AND comment_id = #{commentId} ) AS my_hot
+    </select>
+
+    <select id="countSubComment" resultType="Integer">
+        SELECT COUNT(*) num_sub_comment FROM dynamic_comment WHERE pid = #{pid}
+    </select>
+
+    <insert id="postComment" parameterType="cn.slipbend.model.Comment">
+        INSERT INTO
+            dynamic_comment (
+                dynamic_id,
+                <if test="id != null">
+                    pid,
+                </if>
+                user_id,
+                text )
+            VALUES (
+                #{dynamic.id},
+                <if test="id != null">
+                    #{id},
+                </if>
+                #{user.id},
+                #{text}
+            )
+    </insert>
+
+</mapper>

@@ -1,0 +1,5 @@
+cn\jxy\ConsumerApplication.class
+cn\jxy\consumer\client\UserClientImpl.class
+cn\jxy\consumer\pojo\User.class
+cn\jxy\consumer\web\ConsumerController.class
+cn\jxy\consumer\client\UserClient.class

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="cn.slipbend.dao.RankDao">
+    <resultMap id="routeRecordResult" type="cn.slipbend.model.RouteRecord">
+        <id column="id" property="id"/>
+        <result column="id" property="user.id"/>
+        <result column="icon" property="user.icon"/>
+        <result column="username" property="user.username"/>
+        <result column="hot" property="hot"/>
+        <result column="leng" property="leng"/>
+        <result column="rank" property="rank"/>
+    </resultMap>
+    <sql id="rank">
+        FROM
+            (SELECT
+                tmp2.id,
+                tmp2.icon,
+                tmp2.username,
+                tmp2.hot,
+                <if test="rankType == 1" >
+                    tmp2.leng,
+                </if>
+                <if test="rankType == 2" >
+                    tmp2.speed,
+                </if>
+                <if test="rankType == 3" >
+                    tmp2.congestion,
+                </if>
+                <if test="rankType == 4" >
+                    tmp2.oil,
+                </if>
+                tmp2.rownum rank
+        FROM
+            (SELECT tmp.*,@rownum := @rownum + 1 AS num_tmp,
+                    @incrnum := CASE
+                    WHEN @rowtotal =
+                    <if test="rankType == 1" >
+                        tmp.leng
+                    </if>
+                    <if test="rankType == 2" >
+                        tmp.speed
+                    </if>
+                    <if test="rankType == 3" >
+                        tmp.congestion
+                    </if>
+                    <if test="rankType == 4" >
+                        tmp.oil
+                    </if>
+                    THEN @incrnum
+                    WHEN @rowtotal :=
+                    <if test="rankType == 1" >
+                        tmp.leng
+                    </if>
+                    <if test="rankType == 2" >
+                        tmp.speed
+                    </if>
+                    <if test="rankType == 3" >
+                        tmp.congestion
+                    </if>
+                    <if test="rankType == 4" >
+                        tmp.oil
+                    </if>
+
+                    THEN @rownum
+                    END AS rownum
+        FROM
+            (SELECT u.id,u.icon,u.username,
+                    SUM(rr.hot) hot,
+                    <if test="rankType == 1 ">
+                        SUM(rr.leng) leng
+                    </if>
+                    <if test="rankType == 2">
+                        MAX(rr.speed) speed
+                    </if>
+                    <if test="rankType == 3">
+                        SUM(rr.congestion) congestion
+                    </if>
+                    <if test="rankType == 4">
+                        SUM(rr.oil) oil
+                    </if>
+        FROM
+            USER u
+
+        INNER JOIN route_record rr
+            ON u.id = rr.user_id
+        WHERE
+            <if test="dateOrWeek == 7">
+            DATE(rr.create_time) = DATE_SUB(CURDATE(),INTERVAL 1 DAY)
+            </if>
+            <if test="dateOrWeek == 8">
+                rr.create_time BETWEEN #{startDate} AND #{endDate}
+            </if>
+            <if test="friendOrCity == 6">
+                AND city = #{city}
+            </if>
+            <if test="friendOrCity == 5">
+                AND u.id
+                IN (SELECT follow_user_id
+                FROM follow
+                WHERE follow_user_id
+                IN
+                (SELECT fans_user_id FROM follow WHERE follow_user_id = #{id})
+                AND fans_user_id = #{id}
+                UNION
+                SELECT follow_user_id FROM follow WHERE follow_user_id = #{id}
+                GROUP BY follow_user_id)
+            </if>
+        GROUP BY u.username
+        ORDER BY
+            <if test="rankType == 1">
+                leng
+            </if>
+            <if test="rankType == 2">
+                speed
+            </if>
+            <if test="rankType == 3">
+                congestion
+            </if>
+            <if test="rankType == 4">
+                oil
+            </if>
+        DESC) AS tmp,
+        (SELECT @rownum := 0, @rowtotal := NULL, @incrnum := 0) r) tmp2) AS a
+    </sql>
+    <!--  我自己的前一天排名数据（好友排名-->
+    <select id="getMyRank" resultMap="routeRecordResult">
+        select * <include refid="rank"/> where id = #{id}
+    </select>
+    <!--  我的好友的前一天排名数据（好友排名-->
+    <select id="getFriendOrCityRank" resultMap="routeRecordResult">
+        select * <include refid="rank"/> where id != #{id}
+        limit #{a},#{b}
+    </select>
+    <!-- 统计好友排名的总条数-->
+    <select id="totalRank" resultType="Integer">
+        select count(*) <include refid="rank"/> where id != #{id}
+    </select>
+    <!--  我自己的本周排名数据（好友排名-->
+    <select id="getMyWeekRank" resultType="Integer">
+        select rank <include refid="rank"/> where id = #{id}
+    </select>
+    <!--  本周排名第一第二的头像（好友排名-->
+    <select id="getFSIcon" resultType="String">
+        select icon <include refid="rank"/> limit 0,2
+    </select>
+</mapper>

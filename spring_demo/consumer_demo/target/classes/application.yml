@@ -1,0 +1,22 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: consumer-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+      instance:
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
+feign:  #开启feign的熔断
+  hystrix:
+    enable: true
+ribbon:
+  ConnectionTimeOut: 500
+    ReadTimeOut: 2000
+#随机
+#user-service:
+  #ribbon:
+    #NFloadBalanceRuleClassName: com.netflix.loadbalancer.RandomRule

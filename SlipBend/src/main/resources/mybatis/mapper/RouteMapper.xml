@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.RouteDao">
+
+    <resultMap id="routeResult" type="cn.slipbend.model.RouteRecord">
+        <id property="id" column="id"/>
+        <result property = "user.id" column = "user_id"/>
+        <result property = "user.icon" column = "icon"/>
+        <result property = "mode.id" column = "mode_id"/>
+        <result property = "time" column = "time"/>
+        <result property = "speed" column = "speed"/>
+        <result property = "leng" column = "leng"/>
+        <result property = "imageUrl" column = "imageUrl"/>
+        <result property = "createTime" column = "create_time"/>
+    </resultMap>
+
+    <resultMap id="routeResult2" extends="routeResult" type="cn.slipbend.model.RouteRecord">
+        <association property="mode.numCompetitor" column="mode_id"
+                     select="cn.slipbend.dao.RouteDao.countNumCompetitor"/>
+    </resultMap>
+
+    <resultMap id="routeResult3" extends="routeResult" type="cn.slipbend.model.RouteRecord">
+        <association property="hasMyHot" column="{userId = login_user_id, routeId = id}"
+                     select="cn.slipbend.dao.RouteHotDao.hasMyHot"/>
+        <association property="hot" column="id"
+                     select="cn.slipbend.dao.RouteHotDao.countRouteHot"/>
+    </resultMap>
+
+    <sql id="route">
+        SELECT
+            r.id,
+            r.imageUrl,
+            r.create_time,
+            r.time,
+            r.speed,
+            r.leng,
+            IFNULL(#{loginUserId}, "") login_user_id
+        FROM
+            route_record r
+        WHERE
+            r.user_id = #{id}
+            <if test="modeId != null" >
+                AND mode_id = #{modeId}
+            </if>
+        ORDER BY
+            r.create_time DESC
+    </sql>
+    <select id="getMyRoute" resultMap="routeResult3">
+        select * from (<include refid="route"/>) a
+        limit #{a},#{b}
+    </select>
+
+    <select id="findEarliestUserAndRoute" resultMap="routeResult2">
+        SELECT
+            rr.id,
+            rr.mode_id,
+            rr.imageUrl,
+            rr.create_time,
+            u.username,
+            u.icon
+        FROM
+            route_record rr
+            LEFT JOIN (SELECT route_record_id,count(route_record_id) route_hot FROM route_record_hot GROUP BY route_record_id) rrh ON rrh.route_record_id = rr.id
+            LEFT JOIN user u ON rr.user_id = u.id
+        WHERE
+            rr.mode_id = #{modeId} AND
+            rr.create_time BETWEEN '${lastMonth}-01 00:00:00' AND '${thisMonth} 23:59:59'
+        ORDER BY
+            route_hot DESC
+            LIMIT 1
+    </select>
+
+    <select id="countNumCompetitor" resultType="java.lang.Long">
+        SELECT
+            COUNT(*)
+        FROM
+            (SELECT DISTINCT user_id FROM route_record WHERE mode_id = #{modeId}) competitor
+    </select>
+
+    <delete id="deleteRoutes">
+        delete  from route_record where id in
+        <foreach collection="list" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

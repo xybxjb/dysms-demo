@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.LoginDao">
+
+    <select id="findUserByWeChatOrQQ" resultType="cn.slipbend.model.User">
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            <if test="openIdType == 1">
+                we_chat_open_id = #{openId}
+            </if>
+            <if test="openIdType == 2">
+                qq_open_id = #{openId}
+            </if>
+    </select>
+
+    <insert id="insertUserByWeChatOrQQ">
+        INSERT INTO user (
+            phone,
+            <if test="openIdType == 1">
+                we_chat_open_id,
+            </if>
+            <if test="openIdType == 2">
+                qq_open_id,
+            </if>
+            username,
+            icon
+        )
+        VALUES (
+            #{phone},
+            #{openId},
+            #{username},
+            #{icon}
+        )
+    </insert>
+
+    <update id="uptUserWeChatOrQQOpenId">
+        UPDATE user SET
+            <if test="openIdType == 1">
+                we_chat_open_id
+            </if>
+            <if test="openIdType == 2">
+                qq_open_id
+            </if>
+            = #{openId}
+        WHERE phone = #{phone}
+    </update>
+
+</mapper>

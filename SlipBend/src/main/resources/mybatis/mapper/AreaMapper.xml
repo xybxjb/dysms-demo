@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.AreaDao">
+
+    <resultMap id="areaResult" type="cn.slipbend.model.Area">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="num" property="num"/>
+        <result column="pid" property="parent.id"/>
+    </resultMap>
+
+    <resultMap id="areaResult2" type="cn.slipbend.model.Area" extends="areaResult">
+        <collection property="subArea" column="id"
+                    select="cn.slipbend.dao.AreaDao.listSubArea" />
+    </resultMap>
+
+    <select id="getArea" resultMap="areaResult2">
+        SELECT id,name,num,pid FROM area WHERE level = 2 ORDER BY num
+    </select>
+
+    <select id="listSubArea" parameterType="Integer" resultMap="areaResult2">
+        SELECT id,name,num,pid FROM area WHERE pid = #{pid} ORDER BY num
+    </select>
+
+</mapper>

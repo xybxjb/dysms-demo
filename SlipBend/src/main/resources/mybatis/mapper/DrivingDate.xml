@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.DrivingDataDao">
+
+    <resultMap id="RouteRecord" type="cn.slipbend.model.RouteRecord">
+        <id column="id" property="id"/>
+        <result column="user_id" property="user.id"/>
+        <result column="leng" property="leng"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+    <select id="getTmileage" resultMap="RouteRecord">
+        select user_id,sum(leng) leng,
+        <if test="dateType == 1">
+            DATE_FORMAT(create_time,'%Y-%m')
+        </if>
+        <if test="dateType == 2">
+            DATE_FORMAT(create_time,'%Y-%m-%d') create_time
+        </if>
+        from route_record where user_id =#{id} AND create_time BETWEEN ${endDate} AND ${date}
+        group by
+         DATE_FORMAT(create_time,'%Y-%m-%d')
+    </select>
+
+</mapper>

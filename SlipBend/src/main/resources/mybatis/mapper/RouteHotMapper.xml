@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.slipbend.dao.RouteHotDao">
+
+    <insert id="giveHot">
+        INSERT INTO route_record_hot (route_record_id, user_id) VALUES (#{routeId}, #{userId})
+    </insert>
+
+    <delete id="cancelHot">
+        DELETE FROM route_record_hot WHERE route_record_id = #{routeId} AND user_id = #{userId}
+    </delete>
+
+    <select id="hasMyHot" resultType="java.lang.Boolean">
+        SELECT
+	        ( CASE hot WHEN 1 THEN 'true' WHEN 0 THEN 'false' END ) AS has_my_hot
+        FROM
+	        ( SELECT count( * ) hot FROM route_record_hot WHERE route_record_id = #{routeId} AND user_id = #{userId} ) AS my_hot
+    </select>
+
+
+    <select id="countRouteHot" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM route_record_hot WHERE route_record_id = #{routeId}
+    </select>
+
+</mapper>

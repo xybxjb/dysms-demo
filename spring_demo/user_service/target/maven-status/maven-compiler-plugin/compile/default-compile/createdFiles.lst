@@ -1,0 +1,5 @@
+cn\jxy\user\web\UserController.class
+cn\jxy\user\service\UserService.class
+cn\jxy\user\mapper\UserMapper.class
+cn\jxy\user\pojo\User.class
+cn\jxy\UserApplication.class
