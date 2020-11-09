@@ -25,7 +25,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81e135f7-b338-4d9c-9cf7-57e759f834ae" name="Default Changelist" comment="EShop" />
+    <list default="true" id="81e135f7-b338-4d9c-9cf7-57e759f834ae" name="Default Changelist" comment="EShop">
+      <change beforePath="$PROJECT_DIR$/client/src/cn/itcast/eshop/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/cn/itcast/eshop/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/cn/itcast/eshop/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/cn/itcast/eshop/user/dao/UserDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,8 +63,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="ProjectId" id="1jdXMelPmELADYpaHFA1fj4DCVF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553597983447" />
@@ -69,7 +89,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -140,26 +160,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.ConsoleLog" />
         <item itemvalue="Application.Log" />
         <item itemvalue="Application.JSONUtil" />
+        <item itemvalue="Application.ConsoleLog" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -172,6 +182,11 @@
       <updated>1553322195192</updated>
       <workItem from="1553322197205" duration="89636000" />
       <workItem from="1553651937459" duration="329000" />
+      <workItem from="1604134909302" duration="3443000" />
+      <workItem from="1604290815690" duration="691000" />
+      <workItem from="1604380696554" duration="14000" />
+      <workItem from="1604471519044" duration="1659000" />
+      <workItem from="1604805444790" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="EShop商城">
       <created>1604134112257</created>
@@ -184,7 +199,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -196,6 +211,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="EShop商城" />
@@ -206,26 +222,26 @@
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
     <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1049@0.0.1920.1049" timestamp="1604134665331" />
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1604134859487">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1604137158835">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1604134859487" />
-    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1604134859487">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1604137158835" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1604137158835">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.center/0.0.1920.1049@0.0.1920.1049" timestamp="1604134859487" />
-    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1604134859487">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1049@0.0.1920.1049" timestamp="1604137158835" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1604137158835">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.left/0.0.1920.1049@0.0.1920.1049" timestamp="1604134859487" />
-    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1604134859487">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1049@0.0.1920.1049" timestamp="1604137158835" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1604137158835">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.right/0.0.1920.1049@0.0.1920.1049" timestamp="1604134859487" />
-    <state x="440" y="98" key="SettingsEditor" timestamp="1604133091543">
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1049@0.0.1920.1049" timestamp="1604137158835" />
+    <state x="440" y="98" key="SettingsEditor" timestamp="1604290838113">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
-    <state x="440" y="98" key="SettingsEditor/0.0.1920.1049@0.0.1920.1049" timestamp="1604133091543" />
+    <state x="440" y="98" key="SettingsEditor/0.0.1920.1049@0.0.1920.1049" timestamp="1604290838113" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1604134683513">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
@@ -234,19 +250,5 @@
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
     <state x="764" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1049@0.0.1920.1049" timestamp="1604134636007" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/user/src/cn/itcast/eshop/user/dao/impl/UserDAOImpl.java</url>
-          <line>22</line>
-          <properties class="cn.itcast.eshop.user.dao.impl.UserDAOImpl" method="getEntityList">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -38,7 +38,7 @@ public class Client {
     /** Scanner扫描器对象，从控制台录入 */
     protected Scanner sc = new Scanner(System.in);
     /** 日期格式化对象 */
-    protected SimpleDateFormat sdf = new SimpleDateFormat("h:mm a"); // 12:08 PM
+    protected SimpleDateFormat sdf = new SimpleDateFormat("h:mm a");
 
     /**
      * 程序入口
@@ -49,15 +49,7 @@ public class Client {
         c.start();
     }
 
-    /**
-     * Debug调试
-     * 1.在可能出现问题的代码行前加上断点
-     * 2.以Debug模式运行
-     *  F8  --> 单步执行
-     *  F7  --> 进入方法
-     *  Shift + F8 --> 执行完毕方法
-     *  F9  --> 执行到下一个断点
-     */
+
     public void start() {
         GoodsClient goodsClient = new GoodsClient();
         UserClient userClient = new UserClient();
@@ -83,7 +75,8 @@ public class Client {
                 HISTORY = ORDER;
                 result = orderClient.index();
             } else {
-                System.out.println("出错了。");
+                System.out.println("您输入的方式我不认识……");
+                break;
             }
         }
 

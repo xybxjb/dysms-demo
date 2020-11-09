@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4910da0-e5a3-40fe-979a-e884b973d73d" name="Default Changelist" comment="" />
+    <list default="true" id="c4910da0-e5a3-40fe-979a-e884b973d73d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../EShop/client/src/cn/itcast/eshop/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/client/src/cn/itcast/eshop/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/user/src/cn/itcast/eshop/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/user/src/cn/itcast/eshop/user/dao/UserDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +137,7 @@
       <updated>1551605959987</updated>
       <workItem from="1551605963652" duration="12149000" />
       <workItem from="1604132414341" duration="6000" />
+      <workItem from="1604471501779" duration="14000" />
     </task>
     <servers />
   </component>

@@ -81,8 +81,9 @@ public class FileUtil {
 		File destFile = new File(destFilePath);
 		if(!destFile.exists()) {
 			File parent = destFile.getParentFile();
-			if(!parent.exists())
+			if(!parent.exists()) {
 				parent.mkdirs();
+			}
 			destFile.createNewFile();
 		}
 

@@ -20,6 +20,7 @@ public class TXTDataAccess implements IDataAccess {
      * @return
      * @throws Exception
      */
+    @Override
     public <T> List<T> getList(Class<T> clazz) throws Exception {
         // 1.根据实体类的字节码文件对象获取类名
         String userName = clazz.getSimpleName().toLowerCase(); // User --> user

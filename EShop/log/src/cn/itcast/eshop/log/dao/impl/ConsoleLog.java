@@ -16,7 +16,7 @@ import java.util.Date;
  */
 public class ConsoleLog implements ISysLog {
 
-    SimpleDateFormat sdf = new SimpleDateFormat("h:mm a"); // 12:08 PM
+    SimpleDateFormat sdf = new SimpleDateFormat("h:mm a");
 
     @Override
     public void info(String msg) {

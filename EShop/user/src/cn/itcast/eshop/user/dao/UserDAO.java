@@ -5,6 +5,9 @@ import cn.itcast.eshop.user.entity.User;
 
 import java.util.List;
 
+/**
+ * @author User
+ */
 public interface UserDAO extends BaseDAO {
 
     List<User> getEntityList() throws Exception;
