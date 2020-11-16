@@ -247,4 +247,12 @@ public interface UserDao {
     @Select("select nearby from user where id=#{userId}")
     Integer getSignNearby(Integer userId);
 
+    /**
+     * 修改背景图片
+     * @param userId
+     * @param backgroudImage
+     * @return
+     */
+    @Update("update user set background_Image = #{backgroudImage} where id= #{userId}")
+    Integer updatebackgroundImage(Integer userId, String backgroudImage);
 }

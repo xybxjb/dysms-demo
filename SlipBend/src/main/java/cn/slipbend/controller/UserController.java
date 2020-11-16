@@ -216,4 +216,19 @@ public class UserController {
     public ServerResponse getSignNearby(Integer userId) {
         return userService.getSignNearby(userId);
     }
+
+    @RequestMapping("/updatebackgroundImage")
+    @ApiOperation(value = "修改背景图片", httpMethod = "POST",notes = "修改背景图片")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "backgroudImage",value = "背景图片",required = true,dataType = "String"),
+
+    })
+    public ServerResponse updatebackgroundImage(Integer userId,String backgroudImage) {
+
+        return userService.updatebackgroundImage(userId,backgroudImage);
+    }
 }
+
+

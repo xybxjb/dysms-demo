@@ -62,5 +62,4 @@ public class RankServiceImpl implements RankService {
             return ServerResponse.getError("获取数据失败");
         }
     }
-
 }

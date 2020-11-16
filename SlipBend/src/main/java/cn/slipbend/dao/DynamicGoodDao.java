@@ -1,6 +1,7 @@
 package cn.slipbend.dao;
 
 import cn.slipbend.model.User;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -47,4 +48,18 @@ public interface DynamicGoodDao {
      */
     @Select("select u.id,u.username,u.icon from dynamic_good dg left join user u on dg.user_id = u.id where dynamic_id = #{dynamicId} order by dg.create_time desc limit 0,3")
     List<User> lastU(Integer dynamicId);
+
+    /**
+     * 获取用户所有的获赞数
+     * @param userId
+     * @return
+     */
+    @Select("SELECT\n" +
+            " COUNT(dynamic_id) countGood\n" +
+            "FROM\n" +
+            " dynamic_good dg\n" +
+            " LEFT JOIN dynamic d ON dg.dynamic_id = d.id\n" +
+            "WHERE \n" +
+            " d.user_id = #{userId}")
+    Integer userGoods(Integer userId);
 }

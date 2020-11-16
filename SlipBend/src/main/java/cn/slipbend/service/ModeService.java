@@ -17,4 +17,13 @@ public interface ModeService {
      */
     ServerResponse modeSecond(Integer modeId);
 
+    /**
+     * 查询用户此模式的排名和最好成绩
+     * @param userId
+     * @param modeId
+     * @return
+     */
+    ServerResponse findModeHotAndRank(Integer userId, Integer modeId);
+
+
 }

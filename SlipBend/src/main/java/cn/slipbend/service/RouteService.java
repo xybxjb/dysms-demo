@@ -27,13 +27,6 @@ public interface RouteService {
      */
     Object insertRouteRecord(RouteRecord routeRecord);
 
-    /**
-     * 查询用户此模式的排名和最好成绩
-     * @param userId
-     * @param modeName
-     * @return
-     */
-    Object findModeHotAndRank(Integer userId, String modeName);
 
     /**
      * 精选路线
@@ -87,4 +80,10 @@ public interface RouteService {
      * @return 该条行程的热度、当前用户是否为该条行程增添了热度
      */
     ServerResponse hotOperations(Integer ops, Integer routeId, Integer userId);
+
+    /**
+     * 获取行程照片
+     * @param param
+     */
+    ServerResponse getPhoto(Map<String,Object> param);
 }

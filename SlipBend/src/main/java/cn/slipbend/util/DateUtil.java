@@ -44,7 +44,7 @@ public class DateUtil {
         }
     }
 
-    private static SimpleDateFormat createSimpleDateFormat(String dateStr){
+    public static SimpleDateFormat createSimpleDateFormat(String dateStr){
         java.text.SimpleDateFormat sdf = null;
         if(dateStr != null && dateStr.length() == 10){
             sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");

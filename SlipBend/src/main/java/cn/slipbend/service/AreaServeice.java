@@ -9,6 +9,8 @@ public interface AreaServeice {
 
     ServerResponse getArea();
 
+    ServerResponse delArea();
+
     ServerResponse getAreaTop();
 
     ServerResponse getSubArea(Integer id);

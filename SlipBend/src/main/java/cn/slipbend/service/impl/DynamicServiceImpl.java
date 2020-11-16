@@ -48,16 +48,40 @@ public class DynamicServiceImpl implements DynamicService {
             return ServerResponse.getError("获取数据失败");
         }
     }
-    //动态推荐
-//    @Override
-//    public ServerResponse recommend(String id) {
-//        try {
-//            return ServerResponse.getSuccess("获取数据成功",dynamicDao.getRecommend(id));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return ServerResponse.getError("获取数据失败");
-//        }
-//    }
+
+    /**
+     * 动态推荐
+     * @param userId 用户id
+     * @param pageNumber 第几页
+     * @param pageSize 每页的数据量
+     * @return
+     */
+    @Override
+    public ServerResponse recommend(Integer userId, Integer pageNumber, Integer pageSize) {
+        try {
+            // 右滑喜欢的用户的动态
+//            redisUtil.hget();
+
+
+            // 附近的人的动态
+
+            // 同城的人的动态
+
+            // 动态表中按点赞高低排序的动态
+
+            Map<String, Object> param = new HashMap<>();
+
+            Integer a = (pageNumber - 1) * pageSize;
+            Integer b = pageSize;
+            param.put("userId", userId);
+            param.put("a", a);
+            param.put("b", b);
+            return ServerResponse.getSuccess("获取数据成功",dynamicDao.getRecommend(param));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ServerResponse.getError("获取数据失败");
+        }
+    }
 
     /**
      * 获取动态浏览量 或 动态浏览量累计
@@ -68,6 +92,7 @@ public class DynamicServiceImpl implements DynamicService {
     @Override
     public ServerResponse views(Integer type, Integer dynamicId) {
         String dynamicViews = "views" + dynamicId;
+        // 浏览量
         Long views;
 
         switch (type){

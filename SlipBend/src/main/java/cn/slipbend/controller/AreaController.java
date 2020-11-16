@@ -32,6 +32,19 @@ public class AreaController {
         return areaServeice.getArea();
     }
 
+    /**
+     * 删除缓存在 redis 中的地区树
+     * @return
+     */
+    @RequestMapping("delArea")
+    @ApiOperation(value = "删除缓存地区树", httpMethod = "GET", notes = "删除缓存地区树")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
+    })
+    public ServerResponse delArea(){
+        return areaServeice.delArea();
+    }
+
     @RequestMapping("getAreaTop")
     @ApiOperation(value = "获得一级地区", httpMethod = "GET", notes = "获得一级地区")
     @ApiImplicitParams({

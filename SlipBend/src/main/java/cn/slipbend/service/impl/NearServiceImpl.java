@@ -29,7 +29,12 @@ public class NearServiceImpl implements NearService {
     /**
      * 存入用户位置所用 key
      */
-    String key = "slipBendUserId";
+    static final String KEY = "slipBendUserId";
+
+    /**
+     * 保存滑向右边的用户时的 key 所加的前缀
+     */
+    static final String SIGN = "SToR";
 
     /**
      * 保存用户位置信息
@@ -41,7 +46,7 @@ public class NearServiceImpl implements NearService {
     @Override
     public ServerResponse saveUserPosition(Integer userId, Double longitude, Double latitude) {
         try{
-            redisUtil.geoAdd(key,longitude,latitude,userId);
+            redisUtil.geoAdd(KEY,longitude,latitude,userId);
             return ServerResponse.getSuccess("位置保存成功");
         }catch (Exception e){
             e.printStackTrace();
@@ -57,7 +62,7 @@ public class NearServiceImpl implements NearService {
     @Override
     public ServerResponse deleteUserPosition(Integer userId) {
         try{
-            redisUtil.deleteMember(key,userId);
+            redisUtil.deleteMember(KEY,userId);
             return ServerResponse.getSuccess("删除用户位置成功");
         }catch (Exception e){
             e.printStackTrace();
@@ -76,7 +81,7 @@ public class NearServiceImpl implements NearService {
     @Override
     public ServerResponse nearByXY(Double longitude, Double latitude, Integer distance, Integer count) {
         try{
-            return ServerResponse.getSuccess("获取附近成功",redisUtil.redisNearByXY(key,longitude,latitude,distance,count));
+            return ServerResponse.getSuccess("获取附近成功",redisUtil.redisNearByXY(KEY,longitude,latitude,distance,count));
 
         }catch (Exception e){
             e.printStackTrace();
@@ -85,7 +90,7 @@ public class NearServiceImpl implements NearService {
     }
 
     /**
-     * 获取附近的人的 用户 基本信息 及 百公里加速
+     * 获取【附近的人】页面所需的 用户 基本信息 及 百公里加速
      * @param id 用户id
      * @return
      */
@@ -93,6 +98,7 @@ public class NearServiceImpl implements NearService {
     public ServerResponse userInfo(Integer id) {
         try{
             User user = userDao.findUserBaseInfoBy(id);
+
             // 百公里加速
             String time = routeDao.getTime(id);
             String[] split = time.split("");
@@ -138,9 +144,8 @@ public class NearServiceImpl implements NearService {
      */
     @Override
     public ServerResponse slideToRight(Integer userId, Integer slideRightUserId) {
-        String sign = "SToR";
-        String myId = sign + userId;
-        String slideToRightId = sign + slideRightUserId;
+        String myId = SIGN + userId;
+        String slideToRightId = SIGN + slideRightUserId;
         try{
             EachSlipEnum eachSlide = null;
             if(redisUtil.hset(myId, slideToRightId, 1)){
@@ -168,7 +173,7 @@ public class NearServiceImpl implements NearService {
     @Override
     public ServerResponse geoDist(Object member1, Object member2) {
         try{
-            return ServerResponse.getSuccess("获取距离成功",redisUtil.geoDist(key,member1,member2));
+            return ServerResponse.getSuccess("获取距离成功",redisUtil.geoDist(KEY,member1,member2));
 
         }catch (Exception e){
             e.printStackTrace();
@@ -184,7 +189,7 @@ public class NearServiceImpl implements NearService {
     @Override
     public ServerResponse getUserPosition(Integer userId) {
         try{
-            return ServerResponse.getSuccess("获取用户位置成功",redisUtil.redisGeoGet(key,userId));
+            return ServerResponse.getSuccess("获取用户位置成功",redisUtil.redisGeoGet(KEY,userId));
         }catch (Exception e){
             e.printStackTrace();
             return ServerResponse.getError("获取用户位置失败");

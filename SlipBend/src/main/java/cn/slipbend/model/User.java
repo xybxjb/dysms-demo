@@ -42,6 +42,8 @@ public class User {
   private Area city;
   //@ApiModelProperty(value = "地区",name = "area", required = true)
   //private Area area;
+  //@ApiModelProperty(value = "背景图片",name = "backgroundImage", required = true)
+  private String backgroundImage;
 
   //1代表true 0代表false
   private Integer isYWeChat;

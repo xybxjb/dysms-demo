@@ -43,4 +43,21 @@ public class ModeServiceImpl implements ModeService {
             return ServerResponse.getError("获取失败");
         }
     }
+
+    /**
+     * 查询用户此模式的排名和最好成绩
+     * @param userId
+     * @param modeId
+     * @return
+     */
+    @Override
+    public ServerResponse findModeHotAndRank(Integer userId, Integer modeId) {
+
+        try {
+            return ServerResponse.getSuccess("获取成功",modeDao.findModeHotAndRank(userId,modeId));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ServerResponse.getError("获取失败");
+        }
+    }
 }

@@ -124,28 +124,30 @@ public class NearController {
      * @param userId 用户id
      * @return
      */
-//    @RequestMapping("/getUserPosition")
-//    @ApiOperation(value = "获取用户的位置", httpMethod = "POST",notes = "获取用户的位置")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer")
-//    })
-//    public ServerResponse getUserPosition(Integer userId) {
-//        return nearService.getUserPosition(userId);
-//    }
+    @RequestMapping("/getUserPosition")
+    @ApiOperation(value = "获取用户的位置", httpMethod = "POST",notes = "获取用户的位置")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer")
+    })
+    public ServerResponse getUserPosition(Integer userId) {
+        return nearService.getUserPosition(userId);
+    }
 
     /**
      * 备注：此方法可以正常使用，只是用不到
      * 获取两个位置的距离
      * @return
      */
-//    @RequestMapping("/geoDist")
-//    @ApiOperation(value = "获取两个位置的距离", httpMethod = "POST",notes = "获取两个位置的距离")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(paramType = "query",name = "userId",value = "当前用户id",required = true,dataType = "Integer"),
-//            @ApiImplicitParam(paramType = "query",name = "otherUserId",value = "另外一个用户的id",required = true,dataType = "Integer")
-//    })
-//    public ServerResponse geoDist(Integer userId, Integer otherUserId) {
-//        return nearService.geoDist(userId,otherUserId);
-//    }
+    @RequestMapping("/geoDist")
+    @ApiOperation(value = "获取两个位置的距离", httpMethod = "POST",notes = "获取两个位置的距离")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "当前用户id",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "otherUserId",value = "另外一个用户的id",required = true,dataType = "Integer")
+    })
+    public ServerResponse geoDist(Integer userId, Integer otherUserId) {
+        return nearService.geoDist(userId,otherUserId);
+    }
 
 }

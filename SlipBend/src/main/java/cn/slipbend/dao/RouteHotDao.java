@@ -1,6 +1,9 @@
 package cn.slipbend.dao;
 
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+
+import java.util.Map;
 
 @Repository
 public interface RouteHotDao {
@@ -35,4 +38,12 @@ public interface RouteHotDao {
      * @return
      */
     Long countRouteHot(Integer routeId);
+
+    /**
+     * 获取行程照片
+     * @param param
+     * @return
+     */
+    @Select("SELECT photo FROM route_record WHERE user_id = #{userId} AND photo IS NOT NULL LIMIT #{a},#{b}")
+    String getPhoto(Map<String, Object> param);
 }

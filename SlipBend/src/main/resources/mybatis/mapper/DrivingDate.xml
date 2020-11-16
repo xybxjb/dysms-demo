@@ -6,19 +6,92 @@
         <id column="id" property="id"/>
         <result column="user_id" property="user.id"/>
         <result column="leng" property="leng"/>
+        <result property="hot" column="hot"/>
+        <result property="imageUrl" column="imageUrl"/>
+        <result property="speed" column="speed"/>
+        <result property="time" column="time"/>
         <result column="create_time" property="createTime"/>
+        <result column="oil" property="oil"/>
+        <result column="count" property="count"/>
     </resultMap>
-    <select id="getTmileage" resultMap="RouteRecord">
-        select user_id,sum(leng) leng,
+
+    <resultMap id="routeResult2" extends="RouteRecord" type="cn.slipbend.model.RouteRecord">
+        <collection property = "markList" column = "{routeId = id}"
+                    select = "cn.slipbend.dao.RouteMarkDao.selectRouteMarks"/>
+    </resultMap>
+
+
+    <select id="getTmileage" resultType="Map">
+        select
+            user_id userId,
+            sum(leng) leng,
+        <if test="dateType == 1">
+            DATE_FORMAT(create_time,'%Y-%m') date
+        from
+            route_record
+        where
+            user_id =#{id} AND create_time
+        BETWEEN
+            '${endDate}-01 00:00:00' AND '${date}-31 23:59:59'
+        </if>
+        <if test="dateType == 2">
+            DATE_FORMAT(create_time,'%Y-%m-%d') date
+        from
+            route_record
+        where
+            user_id =#{id} AND create_time
+        BETWEEN
+            '${endDate} 00:00:00' AND '${date} 23:59:59'
+        </if>
+        group by
         <if test="dateType == 1">
             DATE_FORMAT(create_time,'%Y-%m')
         </if>
         <if test="dateType == 2">
-            DATE_FORMAT(create_time,'%Y-%m-%d') create_time
+            DATE_FORMAT(create_time,'%Y-%m-%d')
         </if>
-        from route_record where user_id =#{id} AND create_time BETWEEN ${endDate} AND ${date}
-        group by
-         DATE_FORMAT(create_time,'%Y-%m-%d')
     </select>
 
+    <select id="getWeekTmileage" resultType="Map">
+        select
+            IFNULL(#{id}, "") userId,
+            sum(leng) leng,
+            IFNULL(#{startDate}, "") date
+        from
+            route_record
+        where
+            user_id =#{id} AND create_time
+        BETWEEN
+            '${startDate} 00:00:00' AND '${endDate} 23:59:59'
+    </select>
+
+    <select id="getRouteRecords" resultMap="routeResult2">
+        SELECT * FROM route_record
+        WHERE user_id =#{id}
+        <if test="dateOrWeek == 1">
+            AND create_time LIKE concat(#{date},'%')
+        </if>
+        <if test="dateOrWeek == 2">
+            AND create_time BETWEEN '${startDate} 00:00:00' AND '${endDate} 23:59:59'
+        </if>
+    </select>
+
+    <!--获取某日或某周或某月总里程-总油耗-完成次数-->
+    <select id="getMileageTimesOil" resultMap="RouteRecord">
+        SELECT
+            SUM(leng) leng,
+            SUM(oil) oil,
+            Count(*) count
+        FROM
+            route_record
+        WHERE
+            user_id =#{id}
+            <if test="1 == ops">
+                AND create_time LIKE concat(#{date},'%')
+            </if>
+            <if test="2 == ops">
+                AND create_time BETWEEN '${startDate} 00:00:00' AND '${endDate} 23:59:59'
+            </if>
+
+    </select>
 </mapper>

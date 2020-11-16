@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8d9634-8f56-4f8e-a2b3-2f2963d63d6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../EShop/client/src/cn/itcast/eshop/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/client/src/cn/itcast/eshop/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/common/src/cn/itcast/eshop/common/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EShop/user/src/cn/itcast/eshop/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/user/src/cn/itcast/eshop/user/dao/UserDAO.java" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="2b8d9634-8f56-4f8e-a2b3-2f2963d63d6c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +35,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="G:/apache-maven-3.6.0-bin/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.0-bin/apache-maven-3.6.0" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -60,20 +49,8 @@
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
-    <option name="y" value="54" />
-    <option name="width" value="1435" />
-    <option name="height" value="996" />
-  </component>
   <component name="ProjectId" id="1jXHa1TOEgrYB0N8nj6Khz2aVpT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -94,18 +71,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Poker">
     <configuration name="Poker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -160,6 +125,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Poker" />
@@ -191,11 +167,9 @@
       <workItem from="1604380717903" duration="241000" />
       <workItem from="1604469896635" duration="1578000" />
       <workItem from="1604904201783" duration="147000" />
+      <workItem from="1605505710484" duration="185000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,65 +180,34 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="111" y="54" width="1435" height="996" extended-state="0" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="leetcode" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Word Book" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="855" y="318" width="885" height="342" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1604470830987">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>
     <state x="855" y="318" width="885" height="342" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1604470830987" />
-    <state width="1876" height="286" key="GridCell.Tab.0.bottom" timestamp="1604380946015">
-      <screen x="0" y="0" width="1920" height="1049" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1605505903103">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1604380946015" />
-    <state width="1876" height="286" key="GridCell.Tab.0.center" timestamp="1604380946015">
-      <screen x="0" y="0" width="1920" height="1049" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605505903103" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1605505903103">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="286" key="GridCell.Tab.0.center/0.0.1920.1049@0.0.1920.1049" timestamp="1604380946015" />
-    <state width="1876" height="286" key="GridCell.Tab.0.left" timestamp="1604380946015">
-      <screen x="0" y="0" width="1920" height="1049" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605505903103" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1605505903103">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="286" key="GridCell.Tab.0.left/0.0.1920.1049@0.0.1920.1049" timestamp="1604380946015" />
-    <state width="1876" height="286" key="GridCell.Tab.0.right" timestamp="1604380946015">
-      <screen x="0" y="0" width="1920" height="1049" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605505903103" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1605505903103">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="286" key="GridCell.Tab.0.right/0.0.1920.1049@0.0.1920.1049" timestamp="1604380946015" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605505903103" />
     <state x="473" y="233" width="998" height="747" key="SettingsEditor" timestamp="1604471482784">
       <screen x="0" y="0" width="1920" height="1049" />
     </state>

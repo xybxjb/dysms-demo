@@ -36,4 +36,15 @@ public class ModeController {
     public ServerResponse modeSecond(Integer modeId){
         return modeService.modeSecond(modeId);
     }
+
+    @RequestMapping("/findModeRank")
+    @ApiOperation(value = "查询此模式下所有子模式的热度以及用户排名和最好成绩", httpMethod = "POST",notes = "查询此模式下所有子模式的热度以及用户排名和最好成绩")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "modeId",value = "赛道id ",required = true,dataType = "Integer"),
+    })
+    public ServerResponse findModeRank(Integer userId, Integer modeId){
+        return modeService.findModeHotAndRank(userId,modeId);
+    }
 }

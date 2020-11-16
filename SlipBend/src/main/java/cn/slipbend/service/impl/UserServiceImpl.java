@@ -319,4 +319,15 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+
+    // 修改背景图片
+    @Override
+    public ServerResponse updatebackgroundImage(Integer userId,String backgroudImage) {
+        try {
+            return ServerResponse.getSuccess("修改成功",userDao.updatebackgroundImage(userId,backgroudImage));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ServerResponse.getError("修改失败");
+        }
+    }
 }

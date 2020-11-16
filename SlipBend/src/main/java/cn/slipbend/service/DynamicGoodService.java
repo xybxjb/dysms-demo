@@ -13,4 +13,5 @@ public interface DynamicGoodService {
      */
     ServerResponse operations(Integer ops, Integer dynamicId, Integer userId);
 
+    ServerResponse userGooods(Integer userId);
 }

@@ -5,7 +5,6 @@ import cn.slipbend.model.Area;
 import cn.slipbend.service.AreaServeice;
 import cn.slipbend.util.RedisUtil;
 import cn.slipbend.util.ServerResponse;
-import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,22 +34,31 @@ public class AreaServiceImpl implements AreaServeice {
     @Override
     public ServerResponse getArea() {
         try{
-            boolean result = redisUtil.hasKey(AREA_TREE);
-            String areaTreeJson;
+            boolean hasAreaTree = redisUtil.hasKey(AREA_TREE);
+            List<Area> listArea;
 
-            if(result){
-                areaTreeJson = (String) redisUtil.get(AREA_TREE);
+            if(hasAreaTree){
+                listArea = (List<Area>) redisUtil.get(AREA_TREE);
             }else{
                 // 地区树构建
-                List<Area> listArea = areaDao.getArea();
-                areaTreeJson = buildAreaTree(listArea);
-                redisUtil.set(AREA_TREE,areaTreeJson);
+                listArea = areaDao.getArea();
+                redisUtil.set(AREA_TREE,listArea);
             }
-            return ServerResponse.getSuccess("获取地区树成功",areaTreeJson);
+            return ServerResponse.getSuccess("获取地区树成功",listArea);
         }catch (Exception e){
             e.printStackTrace();
             return ServerResponse.getError("获取地区树失败");
         }
+    }
+
+    /**
+     * 删除缓存在 redis 的地区树
+     * @return
+     */
+    @Override
+    public ServerResponse delArea() {
+        redisUtil.del(AREA_TREE);
+        return ServerResponse.getSuccess("删除成功");
     }
 
     @Override
@@ -73,11 +81,4 @@ public class AreaServiceImpl implements AreaServeice {
         }
     }
 
-    private static String buildAreaTree(List<Area> listArea){
-        String areaTreeJson = JSON.toJSONString(listArea);
-//        areaTreeJson = areaTreeJson.replace("name","text");
-//        areaTreeJson = areaTreeJson.replace("subArea","nodes");
-        areaTreeJson = areaTreeJson.replace(",\"subArea\":[]","");
-        return areaTreeJson;
-    }
 }

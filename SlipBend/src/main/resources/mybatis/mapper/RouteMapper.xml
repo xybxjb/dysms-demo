@@ -5,8 +5,22 @@
     <resultMap id="routeResult" type="cn.slipbend.model.RouteRecord">
         <id property="id" column="id"/>
         <result property = "user.id" column = "user_id"/>
+        <result property = "user.username" column = "username"/>
         <result property = "user.icon" column = "icon"/>
         <result property = "mode.id" column = "mode_id"/>
+        <result property = "mode.modeName" column = "mode_name"/>
+        <result property = "parentMode.id" column = "parent_mode_id"/>
+        <result property = "parentMode.modeName" column = "parent_mode_name"/>
+        <result property = "sLongitude" column = "s_longitude"/>
+        <result property = "sLatitude" column = "s_latitude"/>
+        <result property = "eLongitude" column = "e_longitude"/>
+        <result property = "eLatitude" column = "e_latitude"/>
+        <result property = "avgSpeed" column = "avgSpeed"/>
+        <result property = "altitude" column = "altitude"/>
+        <result property = "photo" column = "photo"/>
+        <result property = "mood" column = "mood"/>
+        <result property = "oil" column = "oil"/>
+        <result property = "hot" column = "hot"/>
         <result property = "time" column = "time"/>
         <result property = "speed" column = "speed"/>
         <result property = "leng" column = "leng"/>
@@ -17,6 +31,8 @@
     <resultMap id="routeResult2" extends="routeResult" type="cn.slipbend.model.RouteRecord">
         <association property="mode.numCompetitor" column="mode_id"
                      select="cn.slipbend.dao.RouteDao.countNumCompetitor"/>
+        <collection property = "markList" column = "{routeId = id}"
+                    select = "cn.slipbend.dao.RouteMarkDao.selectRouteMarks"/>
     </resultMap>
 
     <resultMap id="routeResult3" extends="routeResult" type="cn.slipbend.model.RouteRecord">
@@ -24,7 +40,22 @@
                      select="cn.slipbend.dao.RouteHotDao.hasMyHot"/>
         <association property="hot" column="id"
                      select="cn.slipbend.dao.RouteHotDao.countRouteHot"/>
+        <collection property = "markList" column = "{routeId = id}"
+                    select = "cn.slipbend.dao.RouteMarkDao.selectRouteMarks"/>
     </resultMap>
+
+    <resultMap id="routeResult4" extends="routeResult" type="cn.slipbend.model.RouteRecord">
+        <collection property = "markList" column = "{routeId = id}"
+                    select = "cn.slipbend.dao.RouteMarkDao.selectRouteMarks"/>
+    </resultMap>
+
+    <insert id="insertRouteRecord" parameterType="cn.slipbend.model.RouteRecord">
+        INSERT INTO route_record(user_id,mode_id,s_longitude,s_latitude,e_longitude,e_latitude,TIME,avg_speed,speed,leng,altitude,imageUrl)
+        VALUES (#{user.id},#{mode.id},#{sLongitude},#{sLatitude},#{eLongitude},#{eLatitude},#{time},#{avgSpeed},#{speed},#{leng},#{altitude},#{imageUrl})
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+    </insert>
 
     <sql id="route">
         SELECT
@@ -56,6 +87,7 @@
             rr.mode_id,
             rr.imageUrl,
             rr.create_time,
+            u.id user_id,
             u.username,
             u.icon
         FROM
@@ -68,6 +100,24 @@
         ORDER BY
             route_hot DESC
             LIMIT 1
+    </select>
+
+    <select id="findRouteDetailById" resultMap="routeResult4">
+        SELECT
+            u.username,
+            u.icon,
+            r.*,
+            m.id mode_id,
+            m.mode_name mode_name,
+            parentMode.mode_name parent_mode_name,
+            parentMode.id parent_mode_id
+        FROM
+            route_record r
+            LEFT JOIN USER u ON r.user_id = u.id
+            LEFT JOIN MODE m ON r.mode_id = m.id
+            LEFT JOIN MODE parentMode ON parentMode.id = m.parent_id
+        WHERE
+            r.id=#{routeId}
     </select>
 
     <select id="countNumCompetitor" resultType="java.lang.Long">
@@ -83,4 +133,5 @@
             #{id}
         </foreach>
     </delete>
+
 </mapper>

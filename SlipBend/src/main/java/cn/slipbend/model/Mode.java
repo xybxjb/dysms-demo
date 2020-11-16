@@ -30,4 +30,6 @@ public class Mode {
    */
   private Long numCompetitor;
 
+  private RouteRecord routeRecord;
+
 }

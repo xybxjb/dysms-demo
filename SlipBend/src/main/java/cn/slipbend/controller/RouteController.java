@@ -12,6 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,9 +47,10 @@ public class RouteController {
             @ApiImplicitParam(paramType = "query",name = "speed",value = "最高速度",required = true,dataType = "String"),
             @ApiImplicitParam(paramType = "query",name = "leng",value = "路长(里程)",required = true,dataType = "String"),
             @ApiImplicitParam(paramType = "query",name = "altitude",value = "海拔",required = true,dataType = "String"),
-            @ApiImplicitParam(paramType = "query",name = "imageUrl",value = "图片路径",required = true,dataType = "String"),
+            @ApiImplicitParam(paramType = "query",name = "marks",value = "点标记",required = true,dataType = "String"),
+            @ApiImplicitParam(paramType = "query",name = "imageUrl",value = "图片路径",required = false,dataType = "String"),
     })
-    public Object saveRoute(Integer userId, Integer modeId, Double sLongitude, Double sLatitude, Double eLongitude, Double eLatitude, String time, Double avgSpeed, Double speed, Double leng, Double altitude,String imageUrl){
+    public Object saveRoute(Integer userId, Integer modeId, Double sLongitude, Double sLatitude, Double eLongitude, Double eLatitude, String time, Double avgSpeed, Double speed, Double leng, Double altitude,String marks,String imageUrl){
         RouteRecord routeRecord = new RouteRecord();
         User user = new User();
         user.setId(userId);
@@ -67,25 +69,15 @@ public class RouteController {
         Mode mode = new Mode();
         mode.setId(modeId);
         routeRecord.setMode(mode);
-        return routeService.insertRouteRecord(routeRecord);
-    }
 
-    @RequestMapping("/findModeRank")
-    @ApiOperation(value = "查询此模式下所有子模式的热度以及用户排名和最好成绩", httpMethod = "POST",notes = "查询此模式下所有子模式的热度以及用户排名和最好成绩")
-    @ApiImplicitParams({
-            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
-            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer"),
-            @ApiImplicitParam(paramType = "query",name = "modeName",value = "模式名称",required = true,dataType = "String"),
-    })
-    public Object findModeRank(Integer userId, String modeName){
-        return routeService.findModeHotAndRank(userId,modeName);
+        routeRecord.setMarks(marks);
+        return routeService.insertRouteRecord(routeRecord);
     }
 
     @RequestMapping("/featuredRoute")
     @ApiOperation(value = "精选路线", httpMethod = "POST",notes = "精选路线")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
-            //@ApiImplicitParam(paramType = "query",name = "modeName",value = "精选模式",required = false,dataType = "String"),
     })
     public ServerResponse featuredRoute(){
         return routeService.findFeaturedRoute();
@@ -176,4 +168,23 @@ public class RouteController {
         }
         return ServerResponse.getError("不符合的 ops 传入");
     }
+
+    @RequestMapping("/getPhoto")
+    @ApiOperation(value = "获取行程照片",httpMethod = "GET",notes = "获取行程照片")
+    @ApiImplicitParams(value = {
+            @ApiImplicitParam(paramType = "header", name = "token", dataType = "String", required = true, value = "token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用戶id",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "pageNumber",value = "第几页",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "每页的数据量",required = true,dataType = "Integer"),
+    })
+    public ServerResponse getPhoto(Integer userId,Integer pageNumber,Integer pageSize){
+        Integer a = (pageNumber - 1) * pageSize;
+        Integer b = pageSize;
+        Map<String, Object> param = new HashMap<String, Object>();
+        param.put("a",a);
+        param.put("b",b);
+        param.put("userId",userId);
+        return routeService.getPhoto(param);
+    }
+
 }

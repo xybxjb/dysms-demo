@@ -8,27 +8,19 @@ import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
+
 @Repository
 public interface DrivingDataDao {
-    @Select("SELECT SUM(leng) leng,SUM(oil) oil,Count(*) count FROM route_record WHERE user_id =#{id} AND create_time LIKE concat(#{date},'%')")
-    @Results(id = "mileage",value = {
-            @Result(property = "id",column = "id",id = true),
-            @Result(property = "leng",column = "leng"),
-            @Result(property = "oil",column = "oil"),
-            @Result(property = "count",column = "count"),
-    })
-    RouteRecord getMileageTimesOil(@Param("id") String id, @Param("date") String date);
 
-    @Select("SELECT * FROM route_record WHERE user_id =#{id} AND create_time LIKE concat(#{date},'%')")
-    @Results(id = "record",value = {
-            @Result(property = "id",column = "id",id = true),
-            @Result(property = "leng",column = "leng"),
-            @Result(property = "speed",column = "speed"),
-            @Result(property = "time",column = "time"),
-            @Result(property = "hot",column = "hot"),
-            @Result(property = "imageUrl",column = "imageUrl"),
-    })
-    List<RouteRecord> getRouteRecords(@Param("id") String id, @Param("date") String date);
+    RouteRecord getMileageTimesOil(Map<String,Object> param);
+
+    /**
+     * 获取某日或某周或某月总里程记录
+     * @param param
+     * @return
+     */
+    List<RouteRecord> getRouteRecords(Map<String, Object> param);
 
     @Select("SELECT count(*) count, SUM(leng) leng,SUM(oil) oil FROM route_record WHERE user_id =#{id}")
     @Results(id = "tomileage", value = {
@@ -39,6 +31,9 @@ public interface DrivingDataDao {
     })
     RouteRecord getToMileage(@Param("id")String id);
 
-    RouteRecord getTmileage(String id, String date,String endDate,Integer dateType);
+    List<Map<String, Object>> getTmileage(Map<String, Object> param);
+    Map<String, Object> getWeekTmileage(Map<String, Object> param);
+
+
 
 }

@@ -90,7 +90,7 @@
             DATE(rr.create_time) = DATE_SUB(CURDATE(),INTERVAL 1 DAY)
             </if>
             <if test="dateOrWeek == 8">
-                rr.create_time BETWEEN #{startDate} AND #{endDate}
+                rr.create_time BETWEEN '${startDate} 00:00:00' AND '${endDate} 23:59:59'
             </if>
             <if test="friendOrCity == 6">
                 AND city = #{city}

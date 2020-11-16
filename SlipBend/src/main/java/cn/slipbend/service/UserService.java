@@ -103,4 +103,12 @@ public interface UserService {
      */
     ServerResponse getSignNearby(Integer userId);
 
+    /**
+     * 修改背景图片
+     * @param userId
+     * @param backgroudImage
+     * @return
+     */
+
+    ServerResponse updatebackgroundImage(Integer userId, String backgroudImage);
 }

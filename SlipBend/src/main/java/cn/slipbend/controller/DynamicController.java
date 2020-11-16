@@ -57,15 +57,17 @@ public class DynamicController {
         return dynamicService.attentions(id);
     }
 
-//    @RequestMapping("/getRecommend")
-//    @ApiOperation(value = "动态-推荐", httpMethod = "POST",notes = "动态-推荐")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(paramType="header",name="token",dataType="String",required=true,value="token"),
-//            @ApiImplicitParam(paramType = "query",name = "id",value = "用户id",required = true,dataType = "String"),
-//    })
-//    public ServerResponse recommend(String id){
-//        return dynamicService.recommend(id);
-//    }
+    @RequestMapping("/getRecommend")
+    @ApiOperation(value = "动态-推荐", httpMethod = "POST",notes = "动态-推荐")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "header",name="token",dataType = "String",required = true,value = "token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "pageNumber",value = "第几页",required = true,dataType = "Integer"),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "每页的数据量",required = true,dataType = "Integer"),
+    })
+    public ServerResponse recommend(Integer userId, Integer pageNumber, Integer pageSize){
+        return dynamicService.recommend(userId, pageNumber, pageSize);
+    }
 
     @RequestMapping("/views")
     @ApiOperation(value = "动态-浏览量查看或累计", httpMethod = "POST",notes = "动态-浏览量查看或累计")

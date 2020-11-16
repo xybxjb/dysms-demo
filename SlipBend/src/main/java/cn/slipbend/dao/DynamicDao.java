@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author tht
@@ -53,8 +54,12 @@ public interface DynamicDao {
     })
     List<Dynamic> getAttentions(String id);
 
-    //动态推荐
-//    List<Dynamic> getRecommend(String id);
+    /**
+     * 动态推荐
+     * @param param
+     * @return
+     */
+    List<Dynamic> getRecommend(Map<String, Object> param);
 
     /**
      * 获取某条动态
@@ -72,9 +77,5 @@ public interface DynamicDao {
      * @param b
      * @return
      */
-    @Select("SELECT * FROM DYNAMIC WHERE user_id = #{userId}\n" +
-            "ORDER BY create_time DESC\n" +
-            "LIMIT #{a},#{b}")
-    @ResultMap("DynamicResult")
     List<Dynamic> getMyAllDynamic(Integer userId,Integer a,Integer b);
 }

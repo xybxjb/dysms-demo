@@ -44,6 +44,7 @@ public class DynamicGoodServiceImpl implements DynamicGoodService {
         }
     }
 
+
     private Map<String, Object> dynamicGoodStatus(Integer dynamicId, Integer userId){
         Map<String, Object> result = new HashMap<>();
         // 查看 当前用户 对 某条动态 是否 点赞
@@ -53,5 +54,12 @@ public class DynamicGoodServiceImpl implements DynamicGoodService {
         // 获得最近点赞的用户信息（前3个）
         result.put("lastU", dynamicGoodDao.lastU(dynamicId));
         return result;
+    }
+
+
+    @Override
+    public ServerResponse userGooods(Integer userId) {
+
+        return  ServerResponse.getSuccess("获取数据成功",dynamicGoodDao.userGoods(userId));
     }
 }

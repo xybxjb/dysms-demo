@@ -42,5 +42,15 @@ public class DynamicGoodController {
         }
         return ServerResponse.getError("不符合的 ops 传入");
     }
+    @RequestMapping("/userGooods")
+    @ApiOperation(value = "获取用户所有的获赞数", httpMethod = "GET",notes = "获取用户所有的获赞数")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "header",name = "token",dataType = "String",required = true,value = "token"),
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true,dataType = "Integer"),
+    })
+    public ServerResponse userGooods(Integer userId){
+            return dynamicGoodService.userGooods(userId);
 
+
+    }
 }

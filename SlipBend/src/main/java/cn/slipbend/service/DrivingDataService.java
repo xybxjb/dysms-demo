@@ -3,13 +3,21 @@ package cn.slipbend.service;
 import cn.slipbend.util.ServerResponse;
 
 
-public interface DrivingDataService {
-    ServerResponse getMileageTimesOil(String id, String date);
+import java.text.ParseException;
 
-    ServerResponse getRouteRecords(String id, String date);
+import java.util.Map;
+
+
+public interface DrivingDataService {
+    ServerResponse getMileageTimesOil(Integer ops,String id, String date);
+
+    //获取某日或某周或某月总里程记录
+    ServerResponse getRouteRecords(Map<String, Object> param);
 
     ServerResponse getToMileage(String id);
 
-    ServerResponse getTmileage(String id, String date,Integer dateType) throws Exception;
+    ServerResponse getTmileage(Map<String, Object> param);
+
+    ServerResponse getWeekTmileage(Map<String, Object> param) throws Exception;
 
 }

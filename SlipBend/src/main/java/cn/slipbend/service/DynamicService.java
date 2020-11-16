@@ -26,7 +26,14 @@ public interface DynamicService {
      */
     ServerResponse attentions(String id);
 
-//    ServerResponse recommend(String id);
+    /**
+     * 动态推荐
+     * @param userId 用户id
+     * @param pageNumber 第几页
+     * @param pageSize 每页的数据量
+     * @return
+     */
+    ServerResponse recommend(Integer userId, Integer pageNumber, Integer pageSize);
 
     /**
      * 获取动态浏览量 或 动态浏览量累计
