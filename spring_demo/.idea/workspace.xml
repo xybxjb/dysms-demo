@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a28c55-6b0d-481f-ba66-093939bdec94" name="Default Changelist" comment="提交2" />
+    <list default="true" id="23a28c55-6b0d-481f-ba66-093939bdec94" name="Default Changelist" comment="提交2">
+      <change afterPath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_01/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_02/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../singleton/singleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-cloud-demo/common/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/day_01_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_1111/_1111.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +51,9 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="spring_demo" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,7 +114,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/eureka_server/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringMVC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -117,6 +142,16 @@
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.UserApplication">
@@ -175,6 +210,9 @@
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -198,11 +236,26 @@
       <workItem from="1601863600703" duration="2013000" />
       <workItem from="1604121324779" duration="2251000" />
       <workItem from="1604131230589" duration="217000" />
+      <workItem from="1614738550243" duration="85000" />
+      <workItem from="1614739434131" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />

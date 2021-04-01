@@ -26,15 +26,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81e135f7-b338-4d9c-9cf7-57e759f834ae" name="Default Changelist" comment="EShop">
-      <change beforePath="$PROJECT_DIR$/client/src/cn/itcast/eshop/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/cn/itcast/eshop/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/dao/impl/TXTDataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/cn/itcast/eshop/common/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/log/src/cn/itcast/eshop/log/dao/impl/ConsoleLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/dao/impl/TXTDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/common/cn/itcast/eshop/common/util/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/cn/itcast/eshop/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/cn/itcast/eshop/user/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_01/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_02/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../singleton/singleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-cloud-demo/common/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/day_01_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_1111/_1111.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +93,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553597983447" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../redis-demo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -106,6 +119,18 @@
       <recent name="D:\DevelopTools\IdeaProjects\EShop\common\src\cn\itcast\eshop\common\util" />
       <recent name="D:\DevelopTools\IdeaProjects\EShop\common\lib" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -170,6 +195,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -187,6 +215,10 @@
       <workItem from="1604380696554" duration="14000" />
       <workItem from="1604471519044" duration="1659000" />
       <workItem from="1604805444790" duration="21000" />
+      <workItem from="1606353388966" duration="1850000" />
+      <workItem from="1606710867853" duration="25000" />
+      <workItem from="1606710951515" duration="18000" />
+      <workItem from="1614739409170" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="EShop商城">
       <created>1604134112257</created>
@@ -206,12 +238,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="EShop商城" />

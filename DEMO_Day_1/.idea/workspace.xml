@@ -4,7 +4,29 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80deef8f-75d2-44c1-b293-dcff109fe4da" name="Default Changelist" comment="" />
+    <list default="true" id="80deef8f-75d2-44c1-b293-dcff109fe4da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_01/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day_01_02/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../singleton/singleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-cloud-demo/common/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_01_02/day_01_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_1111/_1111.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +57,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.0-bin/apache-maven-3.6.0" />
+        <option name="mavenHome" value="G:/apache-maven-3.6.0-bin/apache-maven-3.6.0" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -57,12 +79,6 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="265" />
-    <option name="y" value="59" />
-    <option name="width" value="1497" />
-    <option name="height" value="951" />
-  </component>
   <component name="ProjectId" id="1jdHl9eCMjcxcF5F4NoZntpbYrb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -81,7 +97,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/java57期/讲义+笔记+资料/主流框架/32.会员版(2.0)-就业课(2.0)-Spring/spring/spring_day01/代码/spring_day01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DuotaiTest" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,6 +110,23 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hashmap_linkedhash" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Test1">
     <configuration name="T1 (1)" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -194,6 +227,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -212,11 +248,31 @@
       <workItem from="1585564105939" duration="338000" />
       <workItem from="1601873714910" duration="502000" />
       <workItem from="1604127198392" duration="10000" />
+      <workItem from="1606190252729" duration="316000" />
+      <workItem from="1606204924801" duration="1861000" />
+      <workItem from="1614739386313" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1606205494005">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1606205494005" />
   </component>
   <component name="masterDetails">
     <states>
