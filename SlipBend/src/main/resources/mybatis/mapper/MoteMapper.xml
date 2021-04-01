@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.slipbend.dao.ModeDao">
+
+    <resultMap id="modeResult2" type="cn.slipbend.model.Mode">
+        <id property="id" column="id"/>
+        <result property = "modeName" column = "mode_name"/>
+        <result property = "parent.id" column = "parent_id"/>
+        <result property = "hot" column = "hot"/>
+        <result property = "sLongitude" column = "s_longitude"/>
+        <result property = "sLatitude" column = "s_latitude"/>
+        <result property = "eLongitude" column = "e_longitude"/>
+        <result property = "eLatitude" column = "e_latitude"/>
+
+        <association property="routeRecord.time" column="id"
+                     select="cn.slipbend.dao.ModeDao.findBestGrades"/>
+        <association property="routeRecord.myMin" column="{userId = user_id,modeId = id}"
+                     select="cn.slipbend.dao.ModeDao.findModeRanking"/>
+    </resultMap>
+
+    
+    <select id="findModeHotAndRank" resultMap="modeResult2">
+        select *,IFNULL(#{userId}, "") user_id
+        from mode where parent_id = #{parentId}
+    </select>
+
+    <select id="findBestGrades"  resultType="String">
+        SELECT `TIME` FROM route_record WHERE mode_id=#{modeId} ORDER BY `TIME` LIMIT 0,1
+    </select>
+    
+    <select id="findModeRanking" resultType="Integer">
+        SELECT MIN(名次) FROM
+        (SELECT a.mode_id,a.user_id,a.time,(@rowNum:=@rowNum+1) AS 名次
+            FROM route_record a,
+            (SELECT (@rowNum :=0) ) b WHERE a.mode_id=#{modeId}
+             ORDER BY `TIME`)AS c
+                WHERE user_id=#{userId}
+    </select>
+
+</mapper>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6217260-65a7-48a9-b950-00e763d55e41" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/DEMO_Day_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DEMO_Day_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_demo/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pEC2maWd352mX8BWcB1fZ0QV8E" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6217260-65a7-48a9-b950-00e763d55e41" name="Default Changelist" comment="" />
+      <created>1614738657743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614738657743</updated>
+      <workItem from="1614738664730" duration="155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
