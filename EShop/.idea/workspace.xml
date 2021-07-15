@@ -26,26 +26,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81e135f7-b338-4d9c-9cf7-57e759f834ae" name="Default Changelist" comment="EShop">
-      <change afterPath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day_01_01/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day_01_02/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../singleton/singleton.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-cloud-demo/common/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vuetest/vuetest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/DEMO_Day_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/DEMO_Day_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/test3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/test3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/test4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/out/production/DEMO_Day_1/ddd/test4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMO_Day_1/src/com/hashmap_linkedhash/HashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMO_Day_1/src/com/hashmap_linkedhash/HashMapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/day_01_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_1111/_1111.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cart/cart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/goods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/goods/goods.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/user/user.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadmodule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../threadmodule/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +189,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
   </component>
@@ -219,6 +214,8 @@
       <workItem from="1606710867853" duration="25000" />
       <workItem from="1606710951515" duration="18000" />
       <workItem from="1614739409170" duration="3000" />
+      <workItem from="1622452032475" duration="112000" />
+      <workItem from="1624611237669" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="EShop商城">
       <created>1604134112257</created>
@@ -231,7 +228,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

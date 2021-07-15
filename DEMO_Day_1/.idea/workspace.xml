@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80deef8f-75d2-44c1-b293-dcff109fe4da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day_01_01/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day_01_02/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../singleton/singleton.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-cloud-demo/common/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vuetest/vuetest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DuotaiTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEMO_Day_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DEMO_Day_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/test3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/test3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/test4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DEMO_Day_1/ddd/test4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hashmap_linkedhash/HashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hashmap_linkedhash/HashMapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day_01_02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day_01_02/day_01_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_1111/_1111.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/spring-cloud-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/cart/cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/cart/cart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/client/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/goods/goods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/goods/goods.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/out/production/client/cn/itcast/eshop/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EShop/user/user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../EShop/user/user.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadmodule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../threadmodule/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,21 +123,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test1">
+  <component name="RunManager" selected="Application.test6">
     <configuration name="T1 (1)" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java.T1" />
-      <module name="DEMO_Day_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="T1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.T1" />
       <module name="DEMO_Day_1" />
       <extension name="coverage">
@@ -157,6 +139,19 @@
     </configuration>
     <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ddd.Test1" />
+      <module name="DEMO_Day_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ddd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ddd.Test2" />
       <module name="DEMO_Day_1" />
       <extension name="coverage">
         <pattern>
@@ -183,8 +178,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ddd.test2" />
+    <configuration name="test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ddd.test3" />
       <module name="DEMO_Day_1" />
       <extension name="coverage">
         <pattern>
@@ -196,8 +191,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ddd.test3" />
+    <configuration name="test5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ddd.test5" />
+      <module name="DEMO_Day_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ddd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ddd.test6" />
       <module name="DEMO_Day_1" />
       <extension name="coverage">
         <pattern>
@@ -212,21 +220,23 @@
     <list>
       <item itemvalue="Application.T1 (1)" />
       <item itemvalue="Application.Test2" />
-      <item itemvalue="Application.T1" />
       <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.test2" />
       <item itemvalue="Application.test3" />
+      <item itemvalue="Application.test5" />
+      <item itemvalue="Application.test6" />
+      <item itemvalue="Application.Test2 (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test6" />
+        <item itemvalue="Application.test5" />
+        <item itemvalue="Application.Test2 (1)" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.test3" />
-        <item itemvalue="Application.test2" />
-        <item itemvalue="Application.T1" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
   </component>
@@ -251,6 +261,10 @@
       <workItem from="1606190252729" duration="316000" />
       <workItem from="1606204924801" duration="1861000" />
       <workItem from="1614739386313" duration="13000" />
+      <workItem from="1618557638047" duration="1377000" />
+      <workItem from="1618636018331" duration="3492000" />
+      <workItem from="1622424320195" duration="250000" />
+      <workItem from="1624503467103" duration="1401000" />
     </task>
     <servers />
   </component>
@@ -262,7 +276,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
